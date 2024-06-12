@@ -26,7 +26,7 @@
 
 <body class="bg-gray-100">
     <div>
-        <!-- NAVBAR -->
+        <!-- COMPONENT 1 - NAVBAR -->
         <!-- I applied the padding to the entire navbar div as this made more sense to me than having it applied on one child component within the parent -->
         <div class="mx-auto bg-white p-4">
             <!-- Main container with navigation and header content -->  <!-- Double check shirk-0, that looks wrong to me -->
@@ -34,13 +34,13 @@
                 <div class="px-4">
                     <img class="h-8" src="assets/component-1/navigation/cache-bank-logo.png">
                 </div>
-                <div class="md:flex items-center justify-between text-black gap-12 shrink-0">
-                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="">Products</a>
-                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="">Features</a>
-                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="">Get Started</a>
-                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="">Contact</a>
+                <div class="hidden md:flex items-center justify-between text-black gap-12 shrink-0">
+                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#product">Product</a>
+                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#features">Features</a>
+                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#get-started">Get Started</a>
+                    <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#contact">Contact</a>
                 </div>
-                <div class="gap-8 items-center md:flex">
+                <div class="hidden gap-8 items-center md:flex">
                     <!--I added horizontal padding to both buttons as I prefer this look, I didn't like how close they were -->
                     <button class="px-4 text-sm font-normal text-dark-gray-800 hover:text-dark-gray-900">Log In</button>
                     <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
@@ -74,23 +74,35 @@
                     </defs>
                   </svg>
                 </button>
-                <div>
-                    
+                <div class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-4 px-4 py-8 overflow-hidden bg-white max-h-screen top-full shadow-main text-black" id="mobile-menu">
+                        <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#product">Product</a>
+                        <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#features">Features</a>
+                        <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#get-started">Get Started</a>
+                        <a class="text-sm font-normal text-dark-gray-700 hover:text-dark-gray-900" href="#contact">Contact</a>
+                        <!--I added horizontal padding to both buttons as I prefer this look, I didn't like how close they were -->
+                        <button class="text-sm font-normal text-dark-gray-800 hover:text-dark-gray-900">Log In</button>
+                        <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
                 </div>
             </div>
         </div>
 
-
-        <div class="w-full">
+        <!-- COMPONENT 2 - PRODUCT -->
+        <div class="w-full" id="#product">
             <!-- Wide full-width container for additional content -->
         </div>
-        <div class="container mx-auto">
+
+        <!-- COMPONENT 3 - FEATURES -->
+        <div class="container mx-auto" id="#features">
             <!-- Centered container for more content -->
         </div>
-        <div class="w-full">
+
+        <!-- COMPONENT 4 - GET STARTED -->
+        <div class="w-full" id="#get-started">
             <!-- Wide full-width container for additional content -->
         </div>
-        <div class="w-full">
+
+        <!-- COMPONENT 5 - CONTACT -->
+        <div class="w-full" id="#contact">
             <!-- Wide full-width container for additional content -->
         </div>
     </div>
@@ -100,7 +112,7 @@
         <!-- Full-width footer container with green background -->
     </div>
     <script>
-        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {alert("Hello")})
+        document.getElementById("mobile-menu-toggle").addEventListener("click", function() {document.getElementById("mobile-menu").classList.toggle("hidden")})
     </script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
