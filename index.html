@@ -5,18 +5,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
+
     <link rel="stylesheet" href="./assets/css/theme.css">
     <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
 </head>
 
-<!-- Added in w-full and 2xl:w-2/3 to match the layout from the component 2 video, I thought this display setup worked nicely-->
-<body class="bg-white-100 w-full 2xl:w-2/3 mx-auto">
+<!-- Added in w-full and 2xl:w-2/3 to match the layout from the component 2 video, I thought this display setup worked nicely, I also broke down the padding so that the whole
+body will have a horizontal padding of 4 units and then each individual section or div can control their respective vertical padding, just to ensure with respect to the viewport width,
+everything stays lining up well -->
+<body class="bg-white-100 w-full 2xl:w-2/3 mx-auto px-4">
     <div>
         <!-- COMPONENT 1 - NAVBAR -->
-        <div class="mx-auto bg-white p-4">
+        <div class="mx-auto bg-white py-4">
             <!-- Main container with navigation and header content -->
             <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
                 <div class="px-4">
@@ -77,8 +80,10 @@
         <!-- COMPONENT 2 - PRODUCT - Hero and Endorsements -->
         <!-- HERO -->
         <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="#product">
-          <!-- Added items-center as this centers the paragraph within the div, I liked this look combined with the paragrap w-3/4-->
-          <div class="flex flex-col justify-center items-center col-span-1 text-center lg:text-start">
+          <!-- Something is wrong with my tailwind installation, the text is only aligned when I remove text-center, so I have left it like this for now, it should be text-center lg:text-start -->
+          <!--NOTE: I have got the desired result now by using the default css properties, text-center and lg:text-left -->
+          <!-- text-center is not present in tailwind.min.css and I believe this is the issue -->
+          <div class="flex flex-col justify-center col-span-1 text-center lg:text-left">
             <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
               The Clever Place to Keep Your Cache
             </h1>
@@ -88,7 +93,7 @@
             </p>
             
             <!-- Added justify center, added gap-4 for spacing between buttons within container-->
-            <div class="flex flex-col items-center justify-center gap-4 lg:flex-row ">
+            <div class="flex flex-col items-center gap-4 lg:flex-row">
               <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">
                 Join Cache Now
               </button>
@@ -161,9 +166,21 @@
 
 
         <!-- COMPONENT 3 - FEATURES -->
-        <div class="container mx-auto" id="#features">
-            <!-- Centered container for more content -->
+        <div class="border border-red-500 container mx-auto py-10 flex flex-col items-center justify-center">
+          <!-- HEADER SECTION-->
+          <div class="border border-red-500 flex flex-col items-center justify-center mt-12">
+
+            <h1 class="mb-4 text-4xl font-extrabold text-dark-grey-900 text-center">Advanced Online Banking Platform</h1>
+
+            <p class="text-lg text-center w-7/12 text-grey-700">A cutting-edge, intuitive online banking interface with features like API integrations, allowing developers to seamlessly manage finances alongside their coding projects.</p>
+
+          </div>
         </div>
+        <!-- END OF HEADER SECTION SECTION-->
+        <!-- CARD SECTION-->
+        <div class="border border-red-500 grid grid-col-3 |">
+        </div>
+
 
         <!-- COMPONENT 4 - GET STARTED -->
         <div class="w-full" id="#get-started">
