@@ -15,9 +15,8 @@
     <link rel="stylesheet" href="../assets/css/loopple/loopple.css">
 </head>
 
-<!-- Added in w-full and I broke down the padding so that the whole body, except for the footer, will have a horizontal padding of 4 units and then each individual section or 
-div can control their respective vertical padding, just to ensure with respect to the viewport width, everything stays lining up well -->
-<!-- Made background color blue for contrast purposes while I diagnose tailwind installation issues -->
+<!-- Added in w-full and I broke down the padding so that the whole body, except for the navbar & footer, will have a horizontal padding of 4 units and then each individual section or 
+div can control their respective vertical padding, just to ensure with respect to the viewport width, everything lines up well -->
 <body class="bg-grey-100 w-full mx-auto">
   <!-- COMPONENT 1 - NAVBAR -->
   <div class="mx-auto bg-white py-4">
@@ -83,10 +82,7 @@ div can control their respective vertical padding, just to ensure with respect t
       <!-- COMPONENT 2 - PRODUCT - Hero and Endorsements -->
       <!-- HERO -->
       <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="#product">
-        <!-- Something is wrong with my tailwind installation, the text is only aligned when I remove text-center, so I have left it like this for now, it should be text-center lg:text-start -->
-        <!--NOTE: I have got the desired result now by using the default css properties, text-center and lg:text-left -->
-        <!-- text-center is not present in tailwind.min.css and I believe this is the issue -->
-        <div class="flex flex-col justify-center col-span-1 text-center lg:text-left">
+        <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
           <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
             The Clever Place to Keep Your Cache
           </h1>
@@ -95,7 +91,7 @@ div can control their respective vertical padding, just to ensure with respect t
             Cache Bank is designed exclusively for software developers. We understand your financial needs are as unique as the code you write. Our services offer cutting-edge financial solutions that help you take care of your cash.
           </p>
           
-          <!-- Added justify center, added gap-4 for spacing between buttons within container-->
+          <!-- Added gap-4 for spacing between buttons within container-->
           <div class="flex flex-col items-center gap-4 lg:flex-row">
             <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">
               Join Cache Now
@@ -242,7 +238,7 @@ div can control their respective vertical padding, just to ensure with respect t
 
         <!-- Card 4 -->
         <!-- I did not remove the rounded borders for this card as that just felt like a contradictory design choice, I felt sticking
-        to the same design as the other cards would result in a better looking UI -->
+        to the same design as the other cards would result in a better UI and UX -->
         <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-500">
 
@@ -326,14 +322,14 @@ div can control their respective vertical padding, just to ensure with respect t
         <!-- Getting Started -->
         <div class="w-full">
           <div class="container flex flex-col gap-16 items-center mx-auto my-32">
-            <!-- Changed grid to match the display properties I wanted with the image -->
+            <!-- Changed grid to match the display properties I wanted with the image to get it to display without being cut -->
             <div class="grid w-full grid-cols-1 gap-32 2xl:grid-cols-2">
               <!-- Set the image to display on at 2xl, I just didn't like when it was being cut on the sides on smaller displays -->
               <div class="bg-cover bg-center 2xl:block rounded-3xl" style="background-image: url(../assets/component-4/getting-started.png);">
               </div>
 
               <div class="flex flex-col gap-16">
-                <div class="flex flex-col gap-2 text-center md:text-left"> <!-- Had to use text-left again instead of text-start -->
+                <div class="flex flex-col gap-2 text-center md:text-start"> 
                   <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl text-dark-grey-900">How Cache Works?</h2>
                   <p class="text-base font-medium leading-7 text-dark-grey-600"><span style="color: rgb(55, 65, 81);">Cache Bank simplifies sign up with a user-friendly website, streamlined account options, and an efficient verification process, making banking accessible and hassle-free for developers.</span></p>
                 </div>
