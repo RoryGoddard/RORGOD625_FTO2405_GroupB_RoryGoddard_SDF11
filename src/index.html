@@ -19,7 +19,7 @@
 div can control their respective vertical padding, just to ensure with respect to the viewport width, everything lines up well -->
 <body class="bg-grey-100 w-full mx-auto">
   <!-- COMPONENT 1 - NAVBAR -->
-  <div class="mx-auto bg-white py-4">
+  <div class="mx-auto bg-white w-full fixed top-0 py-4 z-10">
     <!-- Main container with navigation and header content -->
     <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
         <div class="px-4">
@@ -81,7 +81,7 @@ div can control their respective vertical padding, just to ensure with respect t
   <div class="px-4">
       <!-- COMPONENT 2 - PRODUCT - Hero and Endorsements -->
       <!-- HERO -->
-      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="#product">
+      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="product">
         <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
           <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
             The Clever Place to Keep Your Cache
@@ -165,7 +165,7 @@ div can control their respective vertical padding, just to ensure with respect t
 
 
       <!-- COMPONENT 3 - FEATURES -->
-      <div class="container mx-auto py-10 flex flex-col items-center justify-center">
+      <div class="container mx-auto py-10 flex flex-col items-center justify-center" id="features">
         <!-- HEADER SECTION-->
         <div class="flex flex-col items-center justify-center mt-12">
 
@@ -291,7 +291,7 @@ div can control their respective vertical padding, just to ensure with respect t
 
       <!-- COMPONENT 4 - GET STARTED -->
       <!-- Stats -->
-      <div class="w-full" id="#get-started">
+      <div class="w-full" id="get-started">
 
         <div class="container flex flex-col items-center gap-16 mx-auto my-32">
           <div class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8">
@@ -375,7 +375,7 @@ div can control their respective vertical padding, just to ensure with respect t
       </div>
 
       <!-- COMPONENT 5 - CONTACT -->
-      <div class="w-full" id="#contact">
+      <div class="w-full" id="contact">
         <!-- Grid Container -->
         <!-- I modified the gap at different screen sizes, because I preferred to either have grid cols 1 or grid cols 3 for the cards, grid cols 2 just looked bad in my opinion 
         because at certain resolutions you had 2 cards on one row and then 1 card below with a large amount of empty space -->
