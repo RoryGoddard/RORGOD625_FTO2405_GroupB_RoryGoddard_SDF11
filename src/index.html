@@ -20,7 +20,8 @@ div can control their respective vertical padding, just to ensure with respect t
 <body class="bg-grey-100 w-full mx-auto">
   <!-- COMPONENT 1 - NAVBAR -->
   <!-- I added properties to ensure the navbar will stay at the top of the page to aid with navigation, my main concern was mobile devices losing access to the menu when they scroll -->
-  <div class="mx-auto bg-white w-full fixed top-0 py-4 z-10">
+  <!-- Changed this component to be a nav instead of a div, this felt more semantically correct -->
+  <nav class="mx-auto bg-white w-full fixed top-0 py-4">
     <!-- Main container with navigation and header content -->
     <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
         <div class="px-4">
@@ -66,7 +67,7 @@ div can control their respective vertical padding, just to ensure with respect t
             </defs>
           </svg>
         </button>
-        <div class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-4 px-4 py-8 overflow-hidden bg-white max-h-screen top-full shadow-main text-black" id="mobile-menu">
+        <div class="absolute hidden md:hidden flex flex-col items-start justify-center w-full gap-4 px-4 py-4 overflow-hidden bg-white max-h-screen top-full shadow-main text-black" id="mobile-menu">
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#product">Product</a>
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#features">Features</a>
                 <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#get-started">Get Started</a>
@@ -76,13 +77,14 @@ div can control their respective vertical padding, just to ensure with respect t
                 <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
         </div>
       </div>
-  </div>
+    </nav>
 
   <!-- Moved horizontal padding to this div to allow footer and navbar to take up full width-->
-  <div class="px-4">
+  <!-- Added padding at the top so that the content is always visible now that the navbar will be stuck to the top of the page -->
+  <div class="px-4 pt-16">
       <!-- COMPONENT 2 - PRODUCT - Hero and Endorsements -->
       <!-- HERO -->
-      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5" id="product">
+      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 scroll-mt-24 scroll-mt" id="product">
         <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
           <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
             The Clever Place to Keep Your Cache
@@ -166,7 +168,7 @@ div can control their respective vertical padding, just to ensure with respect t
 
 
       <!-- COMPONENT 3 - FEATURES -->
-      <div class="container mx-auto py-10 flex flex-col items-center justify-center" id="features">
+      <div class="container mx-auto py-10 flex flex-col items-center justify-center scroll-mt-24" id="features">
         <!-- HEADER SECTION-->
         <div class="flex flex-col items-center justify-center mt-12">
 
@@ -292,7 +294,7 @@ div can control their respective vertical padding, just to ensure with respect t
 
       <!-- COMPONENT 4 - GET STARTED -->
       <!-- Stats -->
-      <div class="w-full" id="get-started">
+      <div class="w-full scroll-mt-24" id="get-started">
 
         <div class="container flex flex-col items-center gap-16 mx-auto my-32">
           <div class="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-8">
@@ -368,7 +370,6 @@ div can control their respective vertical padding, just to ensure with respect t
                     <p class="text-base font-medium leading-7 text-dark-grey-600"><span style="color: rgb(55, 65, 81)">Check your information, agree to terms, and submit for account approval.</span></p>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -376,7 +377,7 @@ div can control their respective vertical padding, just to ensure with respect t
       </div>
 
       <!-- COMPONENT 5 - CONTACT -->
-      <div class="w-full" id="contact">
+      <div class="w-full scroll-mt-24" id="contact">
         <!-- Grid Container -->
         <!-- I modified the gap at different screen sizes, because I preferred to either have grid cols 1 or grid cols 3 for the cards, grid cols 2 just looked bad in my opinion 
         because at certain resolutions you had 2 cards on one row and then 1 card below with a large amount of empty space -->
@@ -495,9 +496,7 @@ div can control their respective vertical padding, just to ensure with respect t
     </div>
       <!-- Full-width footer container with green background -->
   </div>
-  <script>
-      document.getElementById("mobile-menu-toggle").addEventListener("click", function() {document.getElementById("mobile-menu").classList.toggle("hidden")})
-  </script>
+  <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
