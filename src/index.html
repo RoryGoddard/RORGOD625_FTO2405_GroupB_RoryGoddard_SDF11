@@ -21,7 +21,7 @@ div can control their respective vertical padding, just to ensure with respect t
   <!-- COMPONENT 1 - NAVBAR -->
   <!-- I added properties to ensure the navbar will stay at the top of the page to aid with navigation, my main concern was mobile devices losing access to the menu when they scroll -->
   <!-- Changed this component to be a nav instead of a div, this felt more semantically correct -->
-  <nav class="mx-auto bg-white w-full fixed top-0 py-4">
+  <nav class="mx-auto bg-white w-full fixed top-0 py-4 z-10">
     <!-- Main container with navigation and header content -->
     <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
         <div class="px-4">
@@ -81,10 +81,10 @@ div can control their respective vertical padding, just to ensure with respect t
 
   <!-- Moved horizontal padding to this div to allow footer and navbar to take up full width-->
   <!-- Added padding at the top so that the content is always visible now that the navbar will be stuck to the top of the page -->
-  <div class="px-4 pt-16">
+  <div class="px-4 pt-20">
       <!-- COMPONENT 2 - PRODUCT - Hero and Endorsements -->
       <!-- HERO -->
-      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 scroll-mt-24 scroll-mt" id="product">
+      <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5 scroll-mt-24" id="product">
         <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
           <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
             The Clever Place to Keep Your Cache
@@ -183,7 +183,7 @@ div can control their respective vertical padding, just to ensure with respect t
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-20">
 
         <!-- Card 1 -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -199,7 +199,7 @@ div can control their respective vertical padding, just to ensure with respect t
         </div>
 
         <!-- Card 2 -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -215,7 +215,7 @@ div can control their respective vertical padding, just to ensure with respect t
         </div>
 
         <!-- Card 3 -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500">
 
             <svg
@@ -242,7 +242,7 @@ div can control their respective vertical padding, just to ensure with respect t
         <!-- Card 4 -->
         <!-- I did not remove the rounded borders for this card as that just felt like a contradictory design choice, I felt sticking
         to the same design as the other cards would result in a better UI and UX -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-500">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -258,7 +258,7 @@ div can control their respective vertical padding, just to ensure with respect t
         </div>
 
         <!-- Card 5 -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-500">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
@@ -274,7 +274,7 @@ div can control their respective vertical padding, just to ensure with respect t
         </div>
 
         <!-- Card 6 -->
-        <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
+        <div class="flex flex-col items-center gap-6 px-6 py-6 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
           <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-pink-500">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
