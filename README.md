@@ -24,7 +24,9 @@ I made multiple minimal changes to the design to the project either motivated by
 would not only look good, but function as I would expect it to as a consumer.
 
 # SDF Presentation Video & Slides
+
 Youtube Link: https://youtu.be/ch7-MaYGeXI
+
 Presentation Slides: https://docs.google.com/presentation/d/1_DsIq-BRKftZv0k0wr9xKrcOPgJMDcRGU4uAMWEFJlU/edit?usp=sharing
 
 # Final Thoughts
